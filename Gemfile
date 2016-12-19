@@ -29,6 +29,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'simple_form', '~> 3.1'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'sendgrid-ruby'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
