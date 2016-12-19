@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=yield(:title)%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div id ="wrapper">
+  
+   <nav id = "Hnav">
+   <p>
+    <ul class="nav nav-tabs nav-justified">
+
+   <li><%=link_to ('Home'),{:controller =>'pages', :action => 'Home'} %> </li>
+   <li><%=link_to ('Research'),{:controller =>'pages', :action => 'Research'} %> </li>
+  <li> <%=link_to ('Thesis'),{:controller =>'pages', :action => 'Thesis'} %> </li>
+  
+  </ul>
+  <header>
+
+  <%=link_to image_tag("Ketan_Sharma4.png",alt:"Dr.Ketan Sharma"),{:controller => 'pages',:action => 'Home'},{:class => 'websitelogo'} %> 
+  
+
+   </header>
+   
+   </p>
+   </nav>
+   <main id ="content">
+  
+
+    <%= yield %>
+    </main>
+
+    </div>
+  </body>
+</html>
